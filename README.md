@@ -1,6 +1,7 @@
 # Taskmaster
 Task Master is a tool to help keep track of things to do.
 
+<img src="https://raw.githubusercontent.com/yichen101/Taskmaster/master/Images/MainPage.png" width="356" height="200"> <img src="https://raw.githubusercontent.com/yichen101/Taskmaster/master/Images/UpdatePage.png" width="356" height="200">
 
 ## How to run
 
