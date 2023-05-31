@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Task Master</title>
+{% endblock %}
+{% block body %}
+<div class="form-box">
+    <h1 class="title">Update Task</h1>
+
+    <form action="/update/{{task.id}}" method ="POST">
+        <div class="taskbar">
+            <input type="text" name="content" id="content" value ="{{task.content}}">
+        </div>
+
+        <div class="deadline-priority">
+            <input type="date" name="deadline" id="deadline" value ="{{task.deadline}}">
+            <input list="priorities" name="priority" id="priority" value ="{{task.priority}}">
+            <datalist id="priorities">
+                <option value="High">
+                <option value="Medium">
+                <option value="Low">
+            </datalist>
+        </div>
+
+        <div class="button">
+            <input type="submit" value="Update Task">
+        </div>
+    </form>
+</div>
+
+<script>
+    var today = new Date().toISOString().split('T')[0];
+    document.getElementById("deadline").setAttribute('min', today);
+</script>
+
+{% endblock %}

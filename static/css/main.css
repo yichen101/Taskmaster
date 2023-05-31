@@ -1,0 +1,118 @@
+.background {
+    background-color: rgb(54, 67, 100);
+}
+
+.title {
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.content {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    width: 800px;
+    background-color: rgb(231, 231, 231);
+}
+
+table, td, th {
+    border: 1px solid rgb(231, 231, 231);
+    color: white;
+    font-size: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    background-color: rgb(117, 0, 0)
+}
+
+th {
+    height: 30px;
+}
+
+td {
+    text-align: center;
+    padding: 5px;
+}
+
+.form-box {
+    background-color: rgb(128, 128, 128);
+    margin-top: 20px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.taskbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.taskbar input {
+    width: 80%;
+    height: 40px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.deadline-priority {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.deadline-priority input {
+    width: 30%;
+    margin: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button input{
+    width: 30%;
+    margin: 10px;
+    border: 0;  
+    padding: 5px;
+    border-radius: 2px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background-color:  rgb(117, 0, 0);
+}
+
+.button input:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+a {
+    color:rgb(230, 230, 0);
+}
+
+a:hover {
+    color:rgb(68, 0, 255);
+}

@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Task Master</title>
+{% endblock %}
+{% block body %}
+<div class="content">
+    <h1 class="title">Task Master</h1>
+
+    {% if tasks|length < 1 %}
+    <h4 style="text-align:center">There are no tasks. Create one below!</h4>
+    {% else %}
+    <table>
+        <tr>
+            <th>Task</th>
+            <th>Added</th>
+            <th>Due Date</th>
+            <th>Priority</th>
+            <th>Actions</th>
+        </tr>
+        {% for task in tasks %}  
+            <tr>
+                <td>{{ task.content }}</td>
+                <td>{{ task.date_created.date() }}</td>
+                <td>{{ task.deadline }}</td>
+                <td>{{ task.priority }}</td>
+                <td>
+                    <a href="/delete/{{task.id}}">Delete</a>
+                    <br>
+                    <a href="/update/{{task.id}}">Update</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+</div>
+
+<div class="form-box">
+    <form action="/" method ="POST">
+
+        <div class="taskbar">
+            <input type="text" name="content" id="content" placeholder="Enter new task...">
+        </div>
+
+        <div class="deadline-priority">
+            <input type="date" name="deadline" id="deadline" placeholder="Deadline">
+            <input list="priorities" name="priority" id="priority" placeholder="Priority">
+            <datalist id="priorities">
+                <option value="High">
+                <option value="Medium">
+                <option value="Low">
+            </datalist>
+        </div>
+
+        <div class="button">
+            <input type="submit" value="Add Task">
+        </div>
+
+    </form>
+</div>
+
+<script>
+    var today = new Date().toISOString().split('T')[0];
+    document.getElementById("deadline").setAttribute('min', today);
+</script>
+
+{% endblock %}
