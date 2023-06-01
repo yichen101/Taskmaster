@@ -34,6 +34,10 @@ python -m venv myenv
 >>> app.app_context().push()
 >>> db.create_all()
 ```
-
+## Installation
+Install required dependencies:
+```
+pip install -r requirements.txt
+```
 # System information
 Platform: Windows-10
